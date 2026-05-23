@@ -2,9 +2,9 @@
 <x-layout>
 
     @if(session('success'))
-        <div class="alert alert-success">
-            {{session('success') }}
-        </div>
+        <x-alert type="success">
+            {{session('success')}}
+        </x-alert>
     @endif
     <h1 class="mb-4">
         Liste des livres

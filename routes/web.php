@@ -17,6 +17,8 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/books',BookController::class)->name('books.index');
+    Route::post('/books',BookController::class);
+    Route::get('/books/create', BookController::class);
     Route::get('/books/{book}/edit', BookController::class);
     Route::put('/books/{book}', BookController::class);
     Route::delete('/books/{book}', BookController::class);
